@@ -5,17 +5,6 @@ $LOAD_PATH << File.expand_path('../../../rspec-expectations/lib', __FILE__)
 $LOAD_PATH << File.expand_path('../../../rspec-mocks/lib', __FILE__)
 require 'rspec/expectations'
 require 'rspec/mocks'
-require 'capybara/rspec'
-require 'capybara/rails'
-
-require 'spork'
-
-Spork.prefork do
-  ENV["RAILS_ENV"] ||= 'test'
-  require File.expand_path("../../config/environment", __FILE__)
-  require 'rspec/rails'
-  
-end
 
 begin
   require 'autotest'

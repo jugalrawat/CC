@@ -3,20 +3,142 @@
 <p> payment gateway </p>
 <script type="text/javascript">
 
-//$( "#btn" ).click(function() {
-$(function() {
 
-  $('#redirect').submit();
 
-});
+
 
 </script>
 
-<form id="redirect" method="post" name="redirect" action="http://www.ccavenue.com/shopzone/cc_details.jsp">
+<form id="redirect" method="get" name="redirect" action="http://www.ccavenue.com/shopzone/cc_details.jsp">
+<table>
+<tr>
+	<td>
+<input type=hidden name=encRequest value=<%=@encRequest%>>
+</td>
+</tr>
+<tr>
+  <td>
+      <input type=hidden name=Merchant_Id value= 'M_demo1_1828'>
+  </td>
+</tr>
 
-<input type=hidden name=encRequest value=<%=@encRequest%>”>
 
-<input type=hidden name=Merchant_Id value= 'M_demo1_1828'>
-<input type="submit" id="btn" /> 
 
+<tr>
+  <td>
+      <label for="amount">amount(ReadOnly)</label>
+  </td>
+
+  <td>
+     <!-- :<input id="O_Id" name="orderId" type="text"  /><br/> -->
+      <%= text_field_tag :amount , 1, :readonly=>"readonly"%>
+  </td>
+</tr>
+<tr>
+  <td>
+     <label for="name">name</label>
+  </td>
+
+  <td>
+    <!--  :<input id="name" name="name" type="text"  /></br/> -->
+      <%= text_field_tag(:name) %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label for="street_address">street_address</label>
+  </td>
+
+  <td>
+     <!-- :<input id="s_address" name="street_address" type="text"  /></br/> -->
+      <%= text_field_tag(:street_address) %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+     <label for="country">country</label>
+  </td>
+
+  <td>
+    <!--  :<input id="country" name="country" type="text"  /></br/> -->
+      <%= text_field_tag(:country) %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+     <label for="cell_phone">cell_phone</label>
+  </td>
+
+  <td>
+    <!--  :<input id="cell_phone" name="cell_phone" type="text"  /></br/>  -->
+      <%= text_field_tag(:cell_phone) %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+     <label for="email">email</label>
+  </td>
+
+  <td>
+   <!--   :<input id="email" name="email" type="text"  /></br/> -->
+      <%= text_field_tag(:email) %>
+  </td>
+</tr>
+<tr>
+  <td>
+     <label for="state">state</label>
+  </td>
+
+  <td>
+   <!--   :<input id="state" name="state" type="text"  /></br/>  -->
+      <%= text_field_tag(:state) %>
+  </td>
+</tr>
+<tr>
+  <td>
+     <label for="current_user_name">current_user_name</label>
+  </td>
+
+  <td>
+   <!--   :<input id="current_user_name" name="current_user_name" type="text"  /></br/>  -->
+      <%= text_field_tag(:current_user_name) %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+     <label for="city">city</label>
+  </td>
+
+  <td>
+  <!--    :<input id="city" name="city" type="text"  /></br/>   -->
+      <%= text_field_tag(:city) %>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <label for="pincode">pincode</label>
+  </td>
+
+  <td>
+      <%= text_field_tag(:pincode) %>
+  </td>
+</tr>
+
+<tr>
+	<td colspan="2">
+		<center><input type="submit" id="btn_submit" /> </center>
+	</td>
+</tr>
+
+
+
+
+</table>
 </form>
+

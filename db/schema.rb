@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508113738) do
+ActiveRecord::Schema.define(version: 20140604075529) do
 
   create_table "entries", force: true do |t|
     t.integer  "MerchantId"
-    t.integer  "Amount"
-    t.integer  "Order_Id"
+    t.integer  "amount"
+    t.integer  "orderId"
     t.string   "Redirect_Url"
     t.integer  "WorkingKey"
     t.string   "billing_cust_name"
@@ -36,6 +36,11 @@ ActiveRecord::Schema.define(version: 20140508113738) do
     t.string   "billing_zip"
     t.string   "delivery_city"
     t.string   "delivery_zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

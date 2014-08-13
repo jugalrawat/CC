@@ -3,8 +3,8 @@ class CreateEntries < ActiveRecord::Migration
     create_table :entries do |t|
       
       t.integer :MerchantId
-      t.integer :Amount
-      t.integer :Order_Id
+      t.integer :amount
+      t.integer :orderId
       t.string  :Redirect_Url
       t.integer :WorkingKey
       t.string  :billing_cust_name
